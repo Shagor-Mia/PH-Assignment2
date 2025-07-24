@@ -19,20 +19,27 @@
   margin: 0;
   padding: 0;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 .container {
   max-width: 1140px;
   margin: auto;
   padding-top: 20px;
 }
+/* nav */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-span {
+.nav-span {
   display: block;
+  font-size: 18px;
 }
 .nav-right {
   display: flex;
@@ -60,12 +67,105 @@ span {
   font-weight: 700;
 }
 
+/* shared */
+.title {
+  font-family: "Noto Serif", serif;
+}
+.paragra {
+  font-family: "Inter", serif;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.orange {
+  color: #e95a08;
+}
+
+.inter {
+  font-family: "Inter", serif;
+}
+
+/* .banner */
+.banner {
+  margin-top: 120px;
+  display: flex;
+  gap: 0;
+  align-items: flex-end;
+}
+
+.banner-title {
+  font-size: 65px;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+/* plant section */
+.plant-section {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.plant-title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+.plant-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.card-div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 20px;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  text-align: center;
+
+  background: whitesmoke;
+}
+.card p {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.card h5 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.card-button {
+  color: white;
+  background: #e95a08;
+  border: none;
+  width: 100%;
+  padding: 26px 0;
+  font-weight: 600;
+}
+
 /* Mobile responsive */
 @media screen and (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
   .nav-right .list {
     display: none;
   }
   .container {
     padding: 10px 20px;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 10px;
+    justify-content: center;
   }
 }
