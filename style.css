@@ -1,4 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.noto-serif-font {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding-top: 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+span {
+  display: block;
+}
+.nav-right {
+  display: flex;
+  gap: 48px;
+  font-family: "Inter", sans-serif;
+}
+.list {
+  display: flex;
+  gap: 48px;
+}
+
+.list li {
+  list-style: none;
+}
+.list li a {
+  text-decoration: none;
+  color: #8987a1;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.list li a:hover {
+  text-decoration: none;
+  color: #252432;
+  transform: scale(1.2);
+  font-weight: 700;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 576px) {
+  .nav-right .list {
+    display: none;
+  }
+  .container {
+    padding: 10px 20px;
+  }
 }
