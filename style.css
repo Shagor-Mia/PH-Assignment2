@@ -71,6 +71,11 @@
 .title {
   font-family: "Noto Serif", serif;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .paragra {
   font-family: "Inter", serif;
   font-size: 22px;
@@ -146,10 +151,21 @@
 .shop {
   margin-bottom: 120px;
 }
+.trust-badge {
+  position: absolute;
+  top: -17%;
+  left: 43%;
+  transform: translateX(-50%);
+
+  width: 286px;
+  z-index: 10;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
+}
 .shop-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .shop-right {
   margin-left: 70px;
@@ -317,17 +333,22 @@
   display: flex;
   flex-direction: column;
   font-family: "Inter", serif;
-  font-size: 16px;
+
   gap: 20px;
 }
 
 .footer-list1 li {
   list-style: none;
 }
+.img-p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
 .footer-list1 li a {
   text-decoration: none;
   color: #8987a1;
-  font-size: 20px;
+  font-size: 14px !important;
   transition: all 0.3s ease;
 }
 .footer-list1 li a:hover {
@@ -344,16 +365,13 @@
 
 /* Mobile responsive */
 @media screen and (max-width: 576px) {
-  body {
-    padding: 10px;
-  }
   .nav-right .list {
     display: none;
   }
   .container {
-    padding: 10px 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-
   .banner {
     display: flex;
     flex-direction: column-reverse;
@@ -361,6 +379,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .card-div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -373,6 +392,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+  .trust-badge {
+    display: none;
   }
   .shop-right {
     margin-left: 0px;
