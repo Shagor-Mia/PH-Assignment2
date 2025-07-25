@@ -242,6 +242,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 25px 0;
   text-align: center;
 }
 .content2 a {
@@ -254,6 +255,59 @@
   font-size: 40px;
   font-family: "Noto serif";
 }
+
+/* subscribe section */
+.subscribe {
+  margin-top: 120px;
+  width: 100%;
+  margin-bottom: 120px;
+}
+.subscribe-bg {
+  background: url("./assets/news-letter-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  text-align: center;
+}
+.sub-div {
+  padding: 210px 0px 190px 0px;
+}
+.sub-title {
+  font-family: "Noto serif";
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto 0;
+}
+
+.input-wrapper input[type="email"] {
+  width: 100%;
+  padding: 15px 120px 15px 20px; /* extra right padding for button */
+  font-size: 16px;
+}
+
+.input-wrapper input[type="button"] {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  font-family: "Inter", serif;
+  height: 100%;
+  padding: 0 30px;
+  font-size: 16px;
+  background-color: #e95a08;
+  color: white;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 /* Mobile responsive */
 @media screen and (max-width: 576px) {
   body {
@@ -309,21 +363,44 @@
     gap: 10px;
     width: 100%;
   }
-}
-.content2 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-  padding: 65px 0;
-}
-.content2 a {
-  color: white;
-  font-family: "Inter", serif;
-  font-size: 16px;
-}
-.content-title2 {
-  color: white;
-  font-size: 22px;
-  font-family: "Noto serif";
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 65px 0;
+  }
+  .content2 a {
+    color: white;
+    font-family: "Inter", serif;
+    font-size: 16px;
+  }
+  .content-title2 {
+    color: white;
+    font-size: 22px;
+    font-family: "Noto serif";
+  }
+
+  /* subscribe */
+  .sub-div {
+    padding: 100px 20px 100px 20px;
+  }
+  .sub-title {
+    font-size: 22px;
+  }
+  .input-wrapper {
+    max-width: 90%; /* 👈 allow full width */
+    margin: 10px auto 0;
+  }
+
+  .input-wrapper input[type="email"] {
+    padding: 15px 100px 15px 15px;
+    font-size: 14px;
+  }
+
+  .input-wrapper input[type="button"] {
+    padding: 0 15px;
+    font-size: 14px;
+    overflow: hidden;
+  }
 }
